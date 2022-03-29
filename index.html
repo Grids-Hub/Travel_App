@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Bootstrap-Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- Animated -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container-fluid">
+              <a class="navbar-brand logo ps-4" href="#"><img class="img-responsive" src="./dist/images/Logo1.svg" alt="" srcset=""> <br>
+            <img class="img-responsive" src="./dist/images/Logo2.svg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse navlist" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Equipment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#" >Blog</a>
+                  </li>
+                </ul>
+                <form class="d-flex ms-auto account">
+                    <a class="navbar-brand " href="#"><img src="./dist/images/account-logo.svg" alt="" srcset="">
+                        Account </a>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- sliders -->
+    <div class="container-fluid front p-0">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+            <div class="col socialicons">
+                <p>Follow us
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                </p>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="frontimage">
+                        <img src="./dist/images/frontpage.svg" alt="">
+                    </div>
+                    <div class="fronttext card ">
+                        <div class="fronts fadeLeft animate one ">
+                            <p class="fronttext1 card-subtitle "><span>A Biking guide</span></p>
+                            <div class="fronttext2 m-0 ">
+                                <p class=" card-title m-0">Be prepared for the Mountains and beyond!</p>
+                            </div>
+                            <a href="#" class="card-link">scroll down<span><i
+                                        class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="frontimage">
+                        <img src="./dist/images/sliders2.jpg" alt="">
+
+                    </div>
+                    <div class="fronttext  ">
+                        <div class="fronts fadeLeft animate one ">
+                            <p class="fronttext1 card-subtitle "><span>A Biking guide</span></p>
+                            <div class="fronttext2 ">
+                                <p class=" card-title ">Be prepared for the Mountains and beyond!</p>
+                            </div>
+                            <a href="#" class="card-link">scroll down<span><i
+                                        class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="frontimage">
+                        <img src="./dist/images/sliders3.jpg" alt="">
+                    </div>
+                    <div class="fronttext   ">
+                        <div class="fronts fadeLeft animate one ">
+                            <p class="fronttext1 card-subtitle "><span>A Biking guide</span></p>
+                            <div class="fronttext2  ">
+                                <p class=" card-title ">Be prepared for the Mountains and beyond!</p>
+                            </div>
+                            <a href="#" class="card-link">scroll down<span><i
+                                        class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="frontimage">
+                        <img src="./dist/images/sliders4.jpg" alt="">
+                    </div>
+                    <div class="fronttext  ">
+                        <div class="fronts fadeLeft animate one ">
+                            <p class="fronttext1 card-subtitle "><span>A Biking guide</span></p>
+                            <div class="fronttext2  ">
+                                <p class=" card-title ">Be prepared for the Mountains and beyond!</p>
+                            </div>
+                            <a href="#" class="card-link">scroll down<span><i
+                                        class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">Start</button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2">01</button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3">02</button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4">03</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Second Page -->
+    <div class="container-fluid secondpara  ">
+        <div class="row second px-xl-5 px-lg-5 px-md-5 px-sm-0 px-xs-0 pb-5 ">
+            <div class="col-xxl-6 col-lg-7 col-md-12 pt-5 pb-5  d-flex justify-content-end ">
+                <div class="card border-0 pt-5 secondtext ">
+                    <div class="card-body pt-2 p-0">
+                        <p class="sectext1 card-subtitle "><span>GEt Started</span></p>
+                        <div class="sectext2  ">
+                            <p class=" card-title pt-4 ">New IMBA Epic Trail and Family Friendly</p>
+                        </div>
+                        <div class="sectext3 ">
+                            <p class="card-text">The new trails that Bruce can tell folks about are small networks at
+                                Willowie and Wirrabara and a brand new IMBA Epic on Mount Remarkable</p>
+                        </div>
+                        <a href="#" class="card-link">read more<span><i class="fa-solid fa-right-long"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-xxl-6 col-lg-5 col-md-12 pt-5 d-flex justify-content-center order-xxl-last order-xl-last order-lg-last order-md-first  order-sm-first order-first secondimage">
+                <img class="img-responsive text-md-center" src="./dist/images/secondpage.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <!-- Third Page -->
+    <div class="container-fluid  ">
+        <div class="row third px-xl-5 px-lg-5 px-md-5 px-sm-0 px-xs-0 pb-5">
+            <div
+                class="col-xxl-6 col-lg-5 col-md-12 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center thirdimage">
+                <img class="img-responsive text-md-center" src="./dist/images/thirdpage.svg" alt="" srcset="">
+            </div>
+            <div class="col-xxl-6 col-lg-7 col-md-12 pt-5 pb-5 d-flex align-items-center justify-content-center ">
+                <div class="card border-0 thirdtext ">
+                    <div class="card-body  ">
+                        <p class="thrtext1 card-subtitle"><span>Biking Essentials</span></p>
+                        <div class="thrtext2 pt-2">
+                            <p class=" card-title ">Your Next ‘New’ Riding Destination</p>
+                        </div>
+                        <div class="thrtext3 pt-2 pb-4">
+                            <p class="card-text">Where the Bass Strait meets the Apple Isle, George Town is a sleepy
+                                industrial town on the northernmost edge of Tasmania. On the banks of the Tamar River,
+                                George Town is one of the oldest settlements in the country, but despite the spectacular
+                                beaches at Low Head, the penguin colony and its proximity to Launceston, it’s a place
+                                many of us haven’t been to, yet!</p>
+                        </div>
+                        <a href="#" class="card-link">read more<span><i class="fa-solid fa-right-long"></i></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Forth Page -->
+    <div class="container-fluid">
+        <div class="row  px-xl-5 px-lg-5 px-md-5 px-sm-0 px-xs-0 pb-5 forth">
+            <div class="col-xxl-6 col-lg-7 col-md-12 pt-5 pb-5 d-flex justify-content-end ">
+                <div class="card border-0 forthtext">
+                    <div class="card-body">
+                        <p class="fortext1 card-subtitle"><span>what you use is the key</span></p>
+                        <div class="fortext2 pt-2 ">
+                            <p class=" card-title pt-2">The Flow team reviews the GT Force</p>
+                        </div>
+                        <div class="fortext3 pt-2 pb-4">
+                            <p class="card-text">Receiving a wholesale redesign for 2022, the GT Force is one of the
+                                newest
+                                bikes on the market to go down the high pivot rabbit hole. It’s an exciting and very
+                                on-trend move for a brand that has been treading water for the past few years with
+                                relatively by-the-books frame and suspension designs. And having spent the past couple
+                                of
+                                months putting the Force to the test, we can confidently say this bike is a huge leap in
+                                the
+                                right direction. As we found out though, it won’t be for everyone, and it’s certainly
+                                not
+                                without its flaws.</p>
+                        </div>
+                        <a href="#" class="card-link">read more<span><i class="fa-solid fa-right-long"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-xxl-6 col-lg-5 col-md-12 pt-5 d-flex justify-content-center order-xxl-last order-xl-last order-lg-last order-md-first  order-sm-first order-first  forthimage">
+                <img class="img-responsive text-md-center" src="./dist/images/forthpage.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid footer pt-5">
+            <div class="footers pt-5 ">
+                <div class="row ">
+                    <div
+                        class="col-md-12 col-xs-12 col-lg-12 col-xl-5 mx-auto my-4 text-xl-start text-lg-center text-md-center text-sm-center text-center foottext">
+                        <p class="text-1">Mountain Biking</p>
+                        <p class="text-2 p1 mt-3">Get out there & discover your next slope, mountain & destination!</p>
+                        <p class="text-3 p2 ms-2">Copyright 2022 MT Biking i, Inc. Terms & Privacy</p>
+                    </div>
+                    <div
+                        class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-2 mx-auto p-0 my-4  text-xl-start text-lg-center text-md-center text-sm-center text-center footlist">
+                        <p> More on The Blog</p>
+                        <ul class="list-unstyled">
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">About MT
+                                    Biking</a></li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Contributors &
+                                    Writers</a></li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Work For Us</a>
+                            </li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                            </li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Privacy
+                                    Policy</a></li>
+                        </ul>
+                    </div>
+                    <div
+                        class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-2  mx-auto p-0 my-4 text-xl-start text-lg-center text-md-center text-sm-center text-center  footlist">
+                        <p>More on US</p>
+                        <ul class="list-unstyled">
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">The Team</a>
+                            </li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Jobs</a></li>
+                            <li class="my-2"><a href="http://" target="_blank" rel="noopener noreferrer">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
