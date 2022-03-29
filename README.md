@@ -1,9 +1,6 @@
 # Travel_App
 
-To Run : 
+To Run the run write following command in your terminal 
 
-First Command
 npm install 
-
-Second Command
 npm run build
