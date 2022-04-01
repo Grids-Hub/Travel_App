@@ -18,11 +18,11 @@ task('CompileSCSS' , function(){
     .pipe(sass().on('error' , sass.logError))
     .pipe(dest(join( path , './dist/css')))
 })
-// task('CompileJS' , function(){
-//     return src(join(path , 'assets/js' , '*.js' ))
-//     .pipe(terser())
-//     .pipe(dest(join( path , 'dist/js')))
-//  })
+task('CompileJS' , function(){
+    return src(join(path , 'assets/js' , '*.js' ))
+    .pipe(terser())
+    .pipe(dest(join( path , 'dist/js')))
+ })
 task('MinifyCSS' , function(){
     return src(join(path ,'./dist/css' , '!(*.min).css') )
     .pipe(cleanCSS({ compatibility : 'ie8'}))
@@ -35,17 +35,17 @@ task('MinifyCSS' , function(){
     .pipe(dest(join( path , './dist/css')))
     .pipe(browserSync.stream())
  })
-// task('MinifyJS' , function(){
-//     return src(join(path ,'./dist/js' , '!(*.min).js') )
-//     .pipe(
-//         rename(({dirname , basename , extname}) => ({
-//         dirname ,
-//         basename :`${basename}.min`,
-//         extname,
-//     })))
-//     .pipe(dest(join( path , './dist/js')))
-//     .pipe(browserSync.stream())
-//  })
+task('MinifyJS' , function(){
+    return src(join(path ,'./dist/js' , '!(*.min).js') )
+    .pipe(
+        rename(({dirname , basename , extname}) => ({
+        dirname ,
+        basename :`${basename}.min`,
+        extname,
+    })))
+    .pipe(dest(join( path , './dist/js')))
+    .pipe(browserSync.stream())
+ })
 task('images', function() {
     return src('./assets/images/*.*')
     .pipe(changed('./dist/images')) //doesn't minify already minified version
@@ -69,8 +69,8 @@ task('reload' , function(cb) {
     cb()
 })
 task('watch' , function(cb){
-    // const jsfile = sync(join(path , 'assets/js' , '*.js'))
-    // watch(jsfile , series('CompileJS' , 'MinifyJS' , 'reload' ))
+    const jsfile = sync(join(path , 'assets/js' , '*.js'))
+    watch(jsfile , series('CompileJS' , 'MinifyJS' , 'reload' ))
     const sassfile = sync(join(path , './assets/sass' , '*.scss'))
     watch(sassfile , series('CompileSCSS' , 'MinifyCSS' , 'reload') )
     const htmlfile = sync(join(path , './*.html'))
@@ -78,8 +78,8 @@ task('watch' , function(cb){
     cb()
 })
 task('default' , series(
-    parallel('CompileSCSS' ),
-    parallel('MinifyCSS' ),
+    parallel('CompileSCSS' , 'CompileJS' ),
+    parallel('MinifyCSS' , 'MinifyJS' ),
     'images',
     'watch' ,
     'server'
