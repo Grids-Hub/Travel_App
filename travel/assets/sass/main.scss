@@ -1,0 +1,578 @@
+@import '__color';
+@import '__function';
+@import '__font-family';
+@import '__animation';
+
+body{
+    background-color: $BG !important;
+}
+.front{
+    margin: 23vw 17vw;
+    @media (max-width: 1024px) {
+        margin: 34vw 16vw;
+    } 
+    @media (max-width: 844px) {
+        margin: 41vw 19vw 0 8vw;
+    }
+    @media (max-width: 768px) {
+        margin: 46vw 18vw;
+    }
+    .front1{
+        ::before {
+            margin-right: 24px;
+            background: $BG;
+            height: 2px;
+            content: '';
+            width: 5.5vw;
+        }
+        span {
+            color: $BG;
+            @include Font-Adjustment('Overpass Mono', normal, 600, 1.50vw,0);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            @media (max-width: 425px) {
+                @include Font-Adjustment('Overpass Mono', normal, 600, 2.7vw,0);
+            }
+        }
+    }
+    .front2{
+        color: $WeiB;
+        @include Font-Adjustment('Chronicle', normal, 0, 6.111vw , 6.944vw);
+        text-transform: capitalize;
+        @media (max-width: 425px) {
+            @include Font-Adjustment('Chronicle', normal, 0, 9.111vw , 11.944vw);
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $WeiB;
+        @include Font-Adjustment('Overpass Mono', normal, 600, 1.250vw,0);
+        @media (max-width: 425px) {
+            @include Font-Adjustment('Overpass Mono', normal, 600, 3.0vw,0);
+        }
+        .fa-solid {
+            display: inline-block;
+            align-self: center;
+            font-size: 1.3vw;
+            padding: 3px 1px 1px 7px;
+            position: relative;
+            bottom: 0;
+            transition: bottom ease 0.5s;
+           @media (max-width:425px) {
+            font-size: 3vw;
+           }
+        }
+        &:hover {
+            .fa-solid {
+                bottom: -10px;
+            }
+        }
+    }
+}
+.carousel-indicators{
+    margin: 0 !important;
+    display: flex;
+    justify-content: start !important;
+    flex-direction: column;
+    align-items: end;
+    top: 28vw;
+    padding-right: 5vw !important;
+    height: 100%;
+    @media (max-width:1024px) {
+        top: 38vw !important;
+    }
+    & [data-mdb-target] {
+        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 22.79px); 
+        color: $WeiB;
+        text-indent: -7vw !important;
+        height: 2.7vw !important;
+        width: 0.3vw !important;
+        background-clip: border-box !important;
+        background-color: $WeiB !important;
+        @media (max-width:844px) {
+            text-indent: -11vw !important;
+        }
+        @media (max-width: 768px) {
+            @include Font-Adjustment('Overpass Mono', normal, 600, 10px, 22.79px);
+            text-indent: 1vw !important ;
+            height: 0.3vw  !important;
+            width: 8vw !important;
+            border: 0 !important;
+            margin: 0 !important;
+        }
+        @media (max-width:425px) {
+            width: 16vw !important;
+        }
+    }
+    &.active{
+        opacity: 1;
+    }
+    @media (max-width:768px) {
+        margin: 0;
+        display: flex;
+        justify-content: center !important;
+        flex-direction: row !important;
+        align-items:  end !important;
+        padding-bottom: 56vw !important;
+    }
+  }
+.carousel-item{
+    display: block;
+    img{
+        @include imageSize(100%,1680px);
+        @media (max-width:845px) {
+            @include imageSize(100%,980px);
+        }
+        @media (max-width:600px) {
+            @include imageSize(100%,680px);
+        }
+    }
+}
+.follow{
+    position: absolute;
+    z-index: 2;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: end;
+    .followdata{
+        padding-top: 32vw;
+        padding-left: 3vw;
+        color: $WeiB;
+        @include Font-Adjustment('Overpass Mono', normal, 600, 1.7vw, 1.5vw);
+        @media (max-width:1024px) {
+            padding-top: 43vw;
+        }
+        @media (max-width:844px) {
+            display: none;
+        }
+    }  
+}
+/* Icon 1 */
+header{
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+    .navbar {
+        width: 100%;
+        box-shadow: none;
+        .logo {
+          padding: 0;
+          color: $WeiB;
+          @include Font-Adjustment('Chronicle-thin', normal, 700, 2.222vw, 2.667vw);
+        }
+        .navlist {
+            ul {
+                li {
+                    a {
+                        padding-left: 3.5rem !important;
+                        color: $WeiB;
+                        @include Font-Adjustment('Overpass Mono', normal, 600, 1.250vw, 1.597vw);
+                    }
+                }
+            }
+        }
+        .account {
+            a {
+                color: $WeiB;
+                @include Font-Adjustment('Overpass Mono', normal, 600, 1.181vw, 1.528vw);
+            }
+        }
+    }
+    .king {
+        padding-left: 8vw;
+    }
+    .animated-icon1{
+        width: 30px;
+        height: 20px;
+        position: relative;
+        margin: 0px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+          }
+          span {
+            background: #e65100;
+          }
+          span:nth-child(1) {
+            top: 0px;
+           }
+           span:nth-child(2) {
+            top: 10px;
+          }
+          span:nth-child(3) {
+            top: 20px;
+          }
+      }
+    .animated-icon1.open{
+        span:nth-child(1) {
+            top: 11px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+            }
+        span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+            }
+        span:nth-child(3) {
+            top: 11px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+            }
+        } 
+}
+.carousel{
+    display: block;
+    max-width: 100%;  
+}
+.secondpara {
+    position: absolute;  
+    left: 0;
+    top: 103vw;
+    transform: translate(0%, -2%);
+    -webkit-transform: translate(0%,-2%);
+    z-index: 2;
+    @media (max-width: 768px) {
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 3.38%);
+    }
+    .seconddivlap{
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 28.38%);
+        display: block;
+        .second {
+            background: transparent;
+            .secondimage {
+                height: 50%;
+                object-fit: cover;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+            .secondtext {
+                background-color: transparent;
+                flex-wrap: wrap;
+                display: block;
+                max-width: 100%;
+                height: auto;
+                @media (max-width: 1440px)  {
+                    padding-left: 5vw;
+                }
+                @media (max-width: 1200px)  {
+                    padding-left: 0;
+                }
+                .sectext1 {
+                    ::before {
+                        margin-right: 24px;
+                        background: $Accent;
+                        height: 2px;
+                        content: '';
+                        width: 72px;
+                    }
+                    span {
+                        color: $Accent;
+                        @include Font-Adjustment('Overpass Mono', normal, 'bold', 18px, 23px);
+                        letter-spacing: 6px;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                    }
+                }
+                .sectext2 {
+                    color: $WeiB;
+                    @include Font-Adjustment('Chronicle-thin', normal, 0, 64px, 76.8px);
+                    
+                }
+                .sectext3 {
+                        color: $WeiB;
+                        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 35px);
+                        flex: none;
+                        order: 2;
+                        align-self: center;
+                        flex-grow: 0;
+                        margin: 27px 0px;  
+                }
+                a {
+                    text-decoration: none;
+                    color: $Accent;
+                    @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 23px);
+                    .fa-solid {
+                        display: inline-block;
+                        align-self: center;
+                        font-size: 20px;
+                        padding: 3px 1px 1px 7px;
+                        position: relative;
+                        right: 0;
+                        transition: top ease 0.5s;
+                    }
+                    &:hover {
+                        .fa-solid {
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .seconddivmobile{
+        background-color: $BG;
+        display: none;
+        .second {
+            background: transparent;
+            .secondimage {
+                height: 50%;
+                object-fit: cover;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+            .secondtext {
+                background-color: transparent;
+                flex-wrap: wrap;
+                display: block;
+                max-width: 100%;
+                height: auto;
+                @media (max-width: 1440px)  {
+                    padding-left: 5vw;
+                }
+                @media (max-width: 1200px)  {
+                    padding-left: 0;
+                }
+                .sectext1 {
+                    ::before {
+                        margin-right: 24px;
+                        background: $Accent;
+                        height: 2px;
+                        content: '';
+                        width: 72px;
+                    }
+                    span {
+                        color: $Accent;
+                        @include Font-Adjustment('Overpass Mono', normal, 'bold', 18px, 23px);
+                        letter-spacing: 6px;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                    }
+                }
+                .sectext2 {
+                    color: $WeiB;
+                    @include Font-Adjustment('Chronicle', normal, 0, 58px, 76.8px);
+                }
+                .sectext3 {
+                        color: $WeiB;
+                        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 35px);
+                        flex: none;
+                        order: 2;
+                        align-self: center;
+                        flex-grow: 0;
+                        margin: 27px 0px;
+                }
+                a {
+                    text-decoration: none;
+                    color: $Accent;
+                    @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 23px);
+                    .fa-solid {
+                        display: inline-block;
+                        align-self: center;
+                        font-size: 20px;
+                        padding: 3px 1px 1px 7px;
+                        position: relative;
+                        right: 0;
+                        transition: top ease 0.5s;
+    
+                    }
+                    &:hover {
+                        .fa-solid {
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // footer
+    .footer {
+        background-color: $BG;
+        .footers {
+            .foottext {
+                .text-1 {
+                    color: $WeiB;
+                    @include Font-Adjustment('Chronicle', normal, 0, 32px, 38px);
+                    letter-spacing: 0.01em;
+                    text-transform: capitalize;
+                }
+
+                .text-2 {
+                    color: $WeiB;
+                    @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 32px);
+                    @media (max-width: 1440px)  {
+                        padding-right: 22vw;
+                    }
+                    @media (max-width: 1200px)  {
+                        padding-right: 0;
+                    }
+                
+                }
+
+                .text-3 {
+                    color: $WeiB;
+                    opacity: 0.5;
+                    @include Font-Adjustment('Overpass Mono', normal, 500, 18px, 32px);
+
+
+                }
+            }
+
+            .footlist {
+                p {
+                    color: $Accent;
+                    @include Font-Adjustment('Overpass Mono', normal, 600, 22px, 32px)
+                }
+
+                ul {
+                    li {
+
+                        a {
+                            @include Font-Adjustment('Overpass Mono', normal, 500, 18px, 32px);
+                            color: $WeiB;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) and (max-width:1440px){
+        top: 103vw;
+        transform: translate(0%, -2%);
+        -webkit-transform: translate(0%,-2%);
+    }
+    @media only screen and (min-width: 964px) and (max-width:1200px){
+        top: 103vw;
+        transform: translate(0%, 10%);
+        -webkit-transform: translate(0%,10%);
+    }
+    @media only screen and (min-width: 845px) and (max-width:964px){
+        top: 103vw;
+        transform: translate(0%, 19%);
+        -webkit-transform: translate(0%,19%);
+    }
+    @media only screen and (min-width: 600px) and (max-width:845px){
+        top: 103vw;
+        transform: translate(0%, -2%);
+        -webkit-transform: translate(0%,-2%);
+    }
+    @media only screen and (min-width: 690px) and (max-width:770px){
+        top: 103vw;
+        transform: translate(0%, 3%);
+        -webkit-transform: translate(0%,3%);
+    }
+   @media (max-width: 690px){
+    top: 103vw;
+        transform: translate(0%, 5%);
+        -webkit-transform: translate(0%,5%);
+   }
+   @media (max-width: 625px){
+        top: 103vw;
+        transform: translate(0%, 6%);
+        -webkit-transform: translate(0%,6%);
+   }
+   @media (max-width: 600px){
+    top: 103vw;
+    transform: translate(0%, 1%);
+    -webkit-transform: translate(0%,1%);
+    }
+    @media (max-width: 550px){
+        top: 103vw;
+        transform: translate(0%, 2%);
+        -webkit-transform: translate(0%,2%);
+    }
+    @media (max-width: 510px){
+        top: 103vw;
+        transform: translate(0%, 3%);
+        -webkit-transform: translate(0%,3%);
+    }
+    @media (max-width: 490px){
+        top: 103vw;
+        transform: translate(0%, 4%);
+        -webkit-transform: translate(0%,4%);
+    }
+    @media (max-width: 425px){
+        top: 101vw;
+        transform: translate(0%, 5%);
+        -webkit-transform: translate(0%,5%);
+    }
+    @media (max-width: 380px){
+        top: 106vw;
+        transform: translate(0%, 5%);
+        -webkit-transform: translate(0%,5%);
+    }
+    @media (max-width: 360px){
+        top: 117vw;
+        transform: translate(0%, 5%);
+        -webkit-transform: translate(0%,5%);
+    }
+    @media (max-width: 345px){
+        top: 120vw;
+        transform: translate(0%, 5%);
+        -webkit-transform: translate(0%,5%);
+    }
+    @media (max-width: 320px){
+        top: 123vw;
+        transform: translate(0%, 7%);
+        -webkit-transform: translate(0%,7%);
+    }
+    @media (max-width :768px) {
+         .seconddivlap{
+             display: none;
+         }
+         .seconddivmobile{
+             display: block;
+         }
+    }
+}
+#post-60{
+    order: -1 !important;
+    padding: 3rem 1rem !important;
+}
+#post-58{
+    padding: 3rem 1rem !important;
+}
