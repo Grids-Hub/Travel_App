@@ -28,9 +28,9 @@
             <div class="carousel-item <?php if ($i == 1) echo ' active'; ?>">
                 <?php the_post_thumbnail('full', array('class' => "d-block w-100")); ?>
                 <div class="position-absolute top-0 h-100  ">
-                    <div class="front">
+                    <div class="front ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
-                        <div class="front2"><?php the_excerpt(); ?></div>
+                        <div class="front2  bounceOut"><?php the_excerpt(); ?></div>
                         <a href="<?php the_permalink(); ?>"><?php echo $started['scrolldown'];?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
                     </div>
                 </div>

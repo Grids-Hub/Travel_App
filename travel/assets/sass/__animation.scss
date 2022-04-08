@@ -12,68 +12,6 @@
     -webkit-animation-fill-mode:  both;
 }
 
-
-.fadeIn{
-    animation-name: 'FadeIn';
-}
-
-@-webkit-keyframes FadeIn {
-    from{
-        opacity: 0;
-        -webkit-transform: translate3d0(0 ,0, 100%);
-        transform: translate3d(0 ,0, 100%);
-    }
-    to{
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes FadeIn {
-    from{
-        opacity: 0;
-        -webkit-transform: translate3d(0 ,0, 100%);
-        transform: translate3d(0 ,0, 100%);
-    }
-    to{
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-.fadeLeft{
-    animation-name: 'FadeLeft';
-}
-
-@-webkit-keyframes FadeLeft {
-    from{
-        opacity: 0;
-        -webkit-transform: translate3d0(-100% ,0, 0);
-        transform: translate3d(-100% ,0, 0);
-    }
-    to{
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes FadeLeft {
-    from{
-        opacity: 0;
-        -webkit-transform: translate3d(-100% ,0, 0);
-        transform: translate3d(-100% ,0, 0);
-    }
-    to{
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-
 .scrollDown{
     animation: 'scrollDown' 1s ease-in-out infinite ;
 }
@@ -88,3 +26,26 @@
        transform: none;
    }
 }
+
+.bounceOut{
+    animation: 'bounceOut' ;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+@keyframes bounceOut{
+    0%{
+        opacity: 1;
+        transform: scale3d(0.3,0.3,0.3);
+        -webkit-transform: scale3d(0.3,0.3,0.3);
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale3d(1.1,1.1,1.1);
+        -webkit-transform: scale3d(1.1,1.1,1.1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale3d(0.3,0.3,0.3);
+        -webkit-transform: scale3d(0.3,0.3,0.3);
+    }
+ }
