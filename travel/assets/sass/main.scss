@@ -5,6 +5,9 @@
 
 body{
     background-color: $BG !important;
+    margin: 0;
+    padding: 0;
+   
 }
 .front{
     margin: 23vw 17vw;
@@ -152,6 +155,16 @@ body{
         }
     }  
 }
+.section{
+   @media (max-width:320px) {
+        display: block ;
+        width: 110% !important;
+   }
+   @media (max-width:280px) {
+    display: block ;
+    width: 125% !important;
+}
+}
 /* Icon 1 */
 header{
     background: transparent;
@@ -255,10 +268,7 @@ header{
             }
         } 
 }
-.carousel{
-    display: block;
-    max-width: 100%;  
-}
+
 .secondpara {
     position: absolute;  
     left: 0;
@@ -278,7 +288,6 @@ header{
                 height: 50%;
                 object-fit: cover;
                 img {
-                    display: block;
                     max-width: 100%;
                 }
             }
@@ -314,17 +323,15 @@ header{
                 }
                 .sectext2 {
                     color: $WeiB;
-                    @include Font-Adjustment('Chronicle-thin', normal, 0, 65px, 76.8px);
+                    @include Font-Adjustment('Chronicle', normal, 0,65px, 76.8px);
                     
                 }
                 .sectext3 {
                         color: $WeiB;
-                        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 35px);
-                        flex: none;
-                        order: 2;
-                        align-self: center;
-                        flex-grow: 0;
-                        margin: 27px 0px;  
+                        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 35px);     
+                        @media (max-width:1024px) {
+                            @include Font-Adjustment('Overpass Mono', normal, 600, 16px, 28px);     
+                        }
                 }
                 a {
                     text-decoration: none;
@@ -575,4 +582,20 @@ header{
 }
 #post-58{
     padding: 3rem 1rem !important;
+}
+@media (min-width: 768px){
+    html{
+        font-size: 25%;
+    }
+}
+
+@media (min-width: 1200px){
+    html{
+        font-size: 50%;
+    }
+}
+@media (min-width: 1400px){
+    html{
+        font-size: 62.5%;
+    }
 }
