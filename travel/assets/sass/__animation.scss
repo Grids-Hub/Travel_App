@@ -29,52 +29,38 @@
 
 .bounceOut{
     animation: 'bounceOut' ;
-    animation-timing-function: ease-out;
-    animation-duration: .75s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode:  both;
+    
 }
 @keyframes bounceOut{
-    
     0% {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: scale(0.5);
         opacity: 0;
-        -webkit-transform: scale3d(0.3, 0.3, 0.3);
-        transform: scale3d(0.3, 0.3, 0.3);
     }
-    20% {
-        opacity: 0.2;
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-    40% {
-        opacity: 0.4;
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: scale3d(0.9, 0.9, 0.9);
-        transform: scale3d(0.9, 0.9, 0.9);
-    }
-    60% {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        opacity: 0.6;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        opacity: 0.8;
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: scale3d(0.97, 0.97, 0.97);
-        transform: scale3d(0.97, 0.97, 0.97);
-    }
+
     100% {
+        transform: scale(1);
         opacity: 1;
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
     }
+ }
+
+
+ .imgslider{
+     animation: 'zoom' 7s   ;
+ }
+
+ @keyframes zoom {
+     0%{
+         transform: scale(1.5);
+         opacity: 0.4;
+     }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+  
+    
  }

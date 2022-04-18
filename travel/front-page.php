@@ -19,16 +19,16 @@
         </div>
     </div>
     <!-- Inner -->
-    <div class="carousel-inner  ">
+    <div class="carousel-inner ">
         <!-- Single item -->
         <?php query_posts(array('post_type' => 'sliders'));
         $i = 1;
         while (have_posts()) : the_post();
         ?>
-            <div class="carousel-item <?php if ($i == 1) echo ' active'; ?>">
-                <?php the_post_thumbnail('full', array('class' => "d-block w-100")); ?>
-                <div class="position-absolute top-0 h-100  ">
-                    <div class="front ">
+            <div class="carousel-item  <?php if ($i == 1) echo ' active'; ?>">
+                <?php the_post_thumbnail('full', array('class' => "d-block w-100 imgslider")); ?>
+                <div class="position-absolute top-0 h-100  img">
+                    <div class="front  ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
                         <div class="front2  bounceOut"><?php the_excerpt(); ?></div>
                         <a href="<?php the_permalink(); ?>"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
@@ -58,7 +58,7 @@
                     <!-- Card -->
                     <div class="card shadow-0 second ps-xl-5 ps-lg-0 ">
                         <!-- Card content -->
-                        <div class="card-body secondtext ps-xl-5 ps-lg-3 ms-xl-5 ms-lg-0 ps-md-0 p-0 pe-xl-5">
+                        <div class="card-body secondtext ps-xl-5 ps-lg-3 ms-xl-5 ms-lg-0 ps-md-0 p-0 pe-xxl-5 pe-xl-0">
                             <!--Subtitle  -->
                             <p class="card-title sectext1"><span><?php the_title(); ?></span></p>
                             <!-- Title -->
