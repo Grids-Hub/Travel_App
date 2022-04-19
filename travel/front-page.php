@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php $started = get_field("started"); ?>
 <!-- Carousel wrapper -->
-<div id="carouselDarkVariant" class=" carousel slide carousel-fade " data-mdb-ride="carousel">
+<div id="carouselDarkVariant" class=" carousel slide carousel-fade" data-mdb-ride="carousel">
     <!-- Indicators -->
     <div class="carousel-indicators">
         <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><?php echo $started['start']; ?></button>
@@ -26,11 +26,11 @@
         while (have_posts()) : the_post();
         ?>
             <div class="carousel-item  <?php if ($i == 1) echo ' active'; ?>">
-                <?php the_post_thumbnail('full', array('class' => "d-block w-100 imgslider")); ?>
+                <?php the_post_thumbnail('full', array('class' => "d-block w-100 ")); ?>
                 <div class="position-absolute top-0 h-100  img">
                     <div class="front  ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
-                        <div class="front2  bounceOut"><?php the_excerpt(); ?></div>
+                        <div class="front2  fadeOut"><?php the_excerpt(); ?></div>
                         <a href="<?php the_permalink(); ?>"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
                     </div>
                 </div>

@@ -515,8 +515,8 @@ header{
     }
     @media only screen and (min-width: 690px) and (max-width:770px){
         top: 103vw;
-        transform: translate(0%, 3%);
-        -webkit-transform: translate(0%,3%);
+        transform: translate(0%, 4%);
+        -webkit-transform: translate(0%,4%);
     }
    @media (max-width: 690px){
     top: 103vw;
@@ -535,8 +535,8 @@ header{
     }
     @media (max-width: 550px){
         top: 103vw;
-        transform: translate(0%, 2%);
-        -webkit-transform: translate(0%,2%);
+        transform: translate(0%, 3%);
+        -webkit-transform: translate(0%,3%);
     }
     @media (max-width: 510px){
         top: 103vw;
@@ -549,19 +549,24 @@ header{
         -webkit-transform: translate(0%,4%);
     }
     @media (max-width: 425px){
-        top: 101vw;
-        transform: translate(0%, 5%);
-        -webkit-transform: translate(0%,5%);
+        top: 106vw;
+        transform: translate(0%, 6%);
+        -webkit-transform: translate(0%,6%);
+    }
+    @media (max-width: 390px){
+        top: 106vw;
+        transform: translate(0%, 7%);
+        -webkit-transform: translate(0%,7%);
     }
     @media (max-width: 380px){
         top: 106vw;
-        transform: translate(0%, 5%);
-        -webkit-transform: translate(0%,5%);
+        transform: translate(0%, 7%);
+        -webkit-transform: translate(0%,7%);
     }
     @media (max-width: 360px){
         top: 117vw;
-        transform: translate(0%, 5%);
-        -webkit-transform: translate(0%,5%);
+        transform: translate(0%, 6%);
+        -webkit-transform: translate(0%,6%);
     }
     @media (max-width: 345px){
         top: 120vw;
@@ -573,7 +578,7 @@ header{
         transform: translate(0%, 7%);
         -webkit-transform: translate(0%,7%);
     }
-    @media (max-width :768px) {
+    @media (max-width :845px) {
          .seconddivlap{
              display: none;
          }
