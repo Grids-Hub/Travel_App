@@ -31,7 +31,7 @@
                     <div class="front  ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
                         <div class="front2  fadeOut"><?php the_excerpt(); ?></div>
-                        <a href="<?php the_permalink(); ?>"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        <a href="<?php the_permalink(); ?>" data-mdb-target="#secondpara"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
 </section>
 <!-- Carousel wrapper -->
 <!-- Body Section-->
-<section class="secondpara">
+<section class="secondpara" id="secondpara">
     <!-- Laptop View -->
     <?php $args = array('category_name' => 'blog');
     $front_page_query = new WP_Query($args); ?>

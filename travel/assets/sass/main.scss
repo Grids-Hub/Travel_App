@@ -59,18 +59,19 @@ body{
         .fa-solid {
             display: inline-block;
             align-self: center;
-            font-size: 1.3vw;
+            font-size: 1vw;
             padding: 3px 1px 1px 7px;
             position: relative;
             bottom: 0;
             transition: bottom ease 0.5s;
+            line-height: 0 !important;
            @media (max-width:425px) {
             font-size: 3vw;
            }
         }
         &:hover {
             .fa-solid {
-                bottom: -10px;
+                bottom: -7px;
             }
         }
     }
