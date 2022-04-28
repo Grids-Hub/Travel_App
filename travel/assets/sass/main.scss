@@ -10,7 +10,7 @@ body{
    
 }
 .front{
-    margin: 23vw 17vw;
+    margin: 19vw 22vw;
     @media (max-width: 1024px) {
         margin: 34vw 16vw;
     } 
@@ -43,7 +43,7 @@ body{
     }
     .front2{
         color: $WeiB;
-        @include Font-Adjustment('Chronicle', normal, 0, 6.111vw , 6.944vw);
+        @include Font-Adjustment('Chronicle', normal, 0, 5.2vw , 6.7vw);
         text-transform: capitalize;
         @media (max-width: 425px) {
             @include Font-Adjustment('Chronicle', normal, 0, 9.111vw , 11.944vw);
@@ -84,7 +84,7 @@ body{
     align-items: end;
     top: 28vw;
     padding-right: 5vw !important;
-    height: 100%;
+    height: auto;
     @media (max-width:1024px) {
         top: 38vw !important;
     }
@@ -269,9 +269,15 @@ header{
             }
         } 
 }
-
+.carousel-item{
+    img{
+        display: block;
+        width: auto;
+        height: 2240px; 
+    }
+}
 .img{
-    width: 100%;
+    width: auto;
     height: 100%;
     background: linear-gradient(rgba(0,0,0, 0.3) ,rgba(0,0,0, 0.3) );
 }
@@ -279,10 +285,11 @@ header{
 .secondpara {
     position: absolute;  
     left: 0;
-    top: 103vw;
+    top: 73vw;
     transform: translate(0%, -2%);
     -webkit-transform: translate(0%,-2%);
     z-index: 2;
+    align-items: center;
     @media (max-width: 768px) {
         background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 3.38%);
     }
@@ -291,12 +298,23 @@ header{
         display: block;
         .second {
             background: transparent;
-            .secondimage {
-                height: 50%;
-                object-fit: cover;
-                img {
-                    max-width: 100%;
-                }
+            @media(max-width:2484px) {
+                width: 26vw;
+            }
+            @media (max-width:2652px) {
+                width: 26vw;
+            }
+            @media(max-width:2432px) {
+                width: 27vw;
+            }
+            @media(max-width:2268px) {
+                width: 28vw;
+            }
+            @media(max-width:2452px) {
+                width: 28vw;
+            }
+            @media (max-width:1440px) {
+                width: auto;
             }
             .secondtext {
                 background-color: transparent;
@@ -310,6 +328,7 @@ header{
                 @media (max-width: 1200px)  {
                     padding-left: 0;
                 }
+                
                 .sectext1 {
                     ::before {
                         margin-right: 24px;
@@ -493,7 +512,11 @@ header{
             }
         }
     }
-    
+    @media only screen and (min-width: 1440px) and (max-width:2560px){
+        top: 73vw;
+        transform: translate(0%, -2%);
+        -webkit-transform: translate(0%,-2%);
+    }
     @media only screen and (min-width: 1200px) and (max-width:1440px){
         top: 103vw;
         transform: translate(0%, -2%);
@@ -590,10 +613,17 @@ header{
 }
 #post-60{
     order: -1 !important;
-    padding: 3rem 1rem !important;
+    padding: 3rem 11rem !important;
+    display: flex;
+    justify-content: end !important;
 }
-#post-58{
-    padding: 3rem 1rem !important;
+#card-60{
+    //padding-left: 264px !important;
+    display: flex;
+    justify-content: start !important;
+}
+#post-58 , #post-62{
+    padding: 3rem 7rem !important;
 }
 @media (min-width: 768px){
     html{

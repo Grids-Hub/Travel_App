@@ -28,11 +28,13 @@
             <div class="carousel-item  <?php if ($i == 1) echo ' active'; ?>">
                 <?php the_post_thumbnail('full', array('class' => "d-block w-100 ")); ?>
                 <div class="position-absolute top-0 h-100  img">
-                    <div class="front  ">
+                    <div class="front ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
                         <div class="front2  fadeOut"><?php the_excerpt(); ?></div>
-                        <a href="<?php the_permalink(); ?>" data-mdb-target="#secondpara"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                    <a href="<?php the_permalink(); ?>" data-mdb-target="#secondpara"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+
                     </div>
+
                 </div>
             </div>
         <?php
@@ -46,7 +48,7 @@
 </section>
 <!-- Carousel wrapper -->
 <!-- Body Section-->
-<section class="secondpara" id="secondpara">
+<section class="secondpara container-fluid" id="secondpara">
     <!-- Laptop View -->
     <?php $args = array('category_name' => 'blog');
     $front_page_query = new WP_Query($args); ?>
@@ -54,11 +56,11 @@
         <div class="container-fluid seconddivlap pb-5">
             <!-- Stack the columns on mobile by making one full-width and the other half-width -->
             <div class="row">
-                <div class="col col-md-7 col-sm-12 align-self-center">
+                <div class="col-6 col-md-6 col-sm-12 align-self-center d-flex justify-content-end" id="card-<?php the_ID(); ?>">
                     <!-- Card -->
-                    <div class="card shadow-0 second ps-xl-5 ps-lg-0 ">
+                    <div class="card shadow-0 second  ps-lg-0 ">
                         <!-- Card content -->
-                        <div class="card-body secondtext ps-xl-5 ps-lg-3 ms-xl-5 ms-lg-0 ps-md-0 p-0 pe-xxl-5 pe-xl-0">
+                        <div class="card-body secondtext ps-lg-3 ms-lg-0 ps-md-0 p-0 ">
                             <!--Subtitle  -->
                             <p class="card-title sectext1"><span><?php the_title(); ?></span></p>
                             <!-- Title -->
@@ -72,7 +74,7 @@
                     </div>
                     <!-- Card -->
                 </div>
-                <div class="col-6 col-md-5 col-sm-12" id="post-<?php the_ID(); ?>">
+                <div class="col-6 col-md-6 col-sm-12 d-flex justify-content-start" id="post-<?php the_ID(); ?>">
                     <?php if (has_post_thumbnail()) {
                         the_post_thumbnail('full', array('class' => 'img-fluid '));
                     }  ?>
