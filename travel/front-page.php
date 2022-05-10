@@ -1,23 +1,14 @@
 <?php get_header(); ?>
 <?php $started = get_field("started"); ?>
 <!-- Carousel wrapper -->
-<div id="carouselDarkVariant" class=" carousel slide carousel-fade" data-mdb-ride="carousel">
+<div id="demo" class="carousel slide " data-ride="carousel" data-inerval=4000>
+
     <!-- Indicators -->
-    <div class="carousel-indicators">
-        <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><?php echo $started['start']; ?></button>
-        <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="1" aria-label="Slide 1"><?php echo $started['01']; ?></button>
-        <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="2" aria-label="Slide 1"><?php echo $started['02']; ?></button>
-        <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="3" aria-label="Slide 1"><?php echo $started['03']; ?></button>
-    </div>
-    <!-- FOllow Us -->
-    <div class="d-flex h-100  follow ">
-        <div class="followdata h-100 ">
-            <p><?php echo $started['followus']; ?>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-twitter"></i></a>
-            </p>
-        </div>
-    </div>
+    <!-- <ul class="carousel-indicators-small">
+        <li data-target="#demo" data-slide-to="0" class="active">Start</li>
+        <li data-target="#demo" data-slide-to="1">01</li>
+        <li data-target="#demo" data-slide-to="2">02</li>
+    </ul> -->
     <!-- Inner -->
     <div class="carousel-inner ">
         <!-- Single item -->
@@ -26,12 +17,12 @@
         while (have_posts()) : the_post();
         ?>
             <div class="carousel-item  <?php if ($i == 1) echo ' active'; ?>">
-                <?php the_post_thumbnail('full', array('class' => "d-block w-100 ")); ?>
+                <?php the_post_thumbnail('full', array('class' => "d-none")); ?>
                 <div class="position-absolute top-0 h-100  img">
                     <div class="front  ">
                         <p class="front1"><span><?php the_title(); ?></span></p>
                         <div class="front2  fadeOut"><?php the_excerpt(); ?></div>
-                        <a href="<?php the_permalink(); ?>" data-mdb-target="#secondpara"><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
+                        <a href="#secondpara" ><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
                     </div>
                 </div>
             </div>
@@ -40,25 +31,42 @@
         endwhile;
         wp_reset_postdata(); ?>
     </div>
+    <!-- Left and right controls -->
+    <div class="carousel-control-prev">
+        <span class="follow">Follow Us
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+        </span>
+    </div>
+
+    <div class="carousel-control-next">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active">Start</li>
+            <li data-target="#demo" data-slide-to="1">01</li>
+            <li data-target="#demo" data-slide-to="2">02</li>
+            <li data-target="#demo" data-slide-to="3">03</li>
+
+        </ul>
+    </div>
 </div>
 
 
 </section>
 <!-- Carousel wrapper -->
 <!-- Body Section-->
-<section class="secondpara" id="secondpara">
+<section class="secondpara container-fluid" id="secondpara">
     <!-- Laptop View -->
     <?php $args = array('category_name' => 'blog');
     $front_page_query = new WP_Query($args); ?>
     <?php while ($front_page_query->have_posts()) : $front_page_query->the_post();; ?>
-        <div class="container-fluid seconddivlap pb-5">
+        <div class="container-fluid container-xxl seconddivlap pb-5 mb-5">
             <!-- Stack the columns on mobile by making one full-width and the other half-width -->
             <div class="row">
-                <div class="col col-md-7 col-sm-12 align-self-center">
+                <div class="col-6 col-md-6 col-sm-12 align-self-center" id="card-<?php the_ID(); ?>">
                     <!-- Card -->
                     <div class="card shadow-0 second ps-xl-5 ps-lg-0 ">
                         <!-- Card content -->
-                        <div class="card-body secondtext ps-xl-5 ps-lg-3 ms-xl-5 ms-lg-0 ps-md-0 p-0 pe-xxl-5 pe-xl-0">
+                        <div class="card-body secondtext ps-lg-3 ms-lg-0 ps-md-0 p-0">
                             <!--Subtitle  -->
                             <p class="card-title sectext1"><span><?php the_title(); ?></span></p>
                             <!-- Title -->
@@ -72,7 +80,7 @@
                     </div>
                     <!-- Card -->
                 </div>
-                <div class="col-6 col-md-5 col-sm-12" id="post-<?php the_ID(); ?>">
+                <div class="col-6 col-md-6 col-sm-12 d-flex justify-content-start" id="post-<?php the_ID(); ?>">
                     <?php if (has_post_thumbnail()) {
                         the_post_thumbnail('full', array('class' => 'img-fluid '));
                     }  ?>
