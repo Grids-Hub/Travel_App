@@ -14,11 +14,11 @@
     <section class="section">
         <header>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg pt-1 mt-1 pt-xl-5 mt-xl-5 pt-lg-5 mt-lg-5 pt-md-3 mt-md-3 pt-sm-2 mt-sm-2">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg  mt-1 mt-xl-5  mt-lg-5 mt-md-3 mt-sm-2" id="nav">
+                <div class="container-fluid container-xxl">
                      <!-- Navbar brand -->
-                <a class="navbar-brand logo ps-sm-0 ps-xm-0 ps-md-5  ps-lg-5 ps-xl-5 ps-xxl-5 " href="#">MT BI <br> <p class="king">
-                    KING
+                <a class="navbar-brand logo ps-sm-0 ps-xm-0 ps-md-5  ps-lg-5 ps-xl-5 ps-xxl-5 " href="#"><p>
+                MT BI <br> <span class="king">KING</span>
                 </p>
                 </a>
                     <!-- Collapse button -->
@@ -32,14 +32,14 @@
                             wp_nav_menu(array(
                                 "theme_location" => 'primary-menu',
                                 'container' => "",
-                                'items_wrap' => '<ul class="navbar-nav ms-auto account p-0 ">%3$s</ul>'
+                                'items_wrap' => '<ul class="navbar-nav ms-auto p-0 ">%3$s</ul>'
                             ));
                         } ?>
                         <?php if (has_nav_menu('secondary-menu')) {
                             wp_nav_menu(array(
                                 "theme_location" => 'secondary-menu',
                                 'container' => "",
-                                'items_wrap' => '<ul class="navbar-nav ms-auto  mb-2 mb-lg-0 ">%3$s</ul>'
+                                'items_wrap' => '<ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">%3$s</ul>'
                             ));
                         } ?>
                     </div>

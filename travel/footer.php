@@ -1,6 +1,6 @@
     <!-- footer -->
     <footer>
-        <div class="container-fluid footer pt-5">
+        <div class="container-fluid container-xxl footer pt-5 ps-xxl-0">
             <div class="footers pt-5 ">
                 <div class="row ">
                     <div class="col-md-12 col-xs-12 col-lg-12 col-xl-5 mx-auto my-4 text-xl-start text-lg-center text-md-center text-sm-center text-center foottext">

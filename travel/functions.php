@@ -63,7 +63,11 @@ function add_nav_menu()
 add_action('init', 'add_nav_menu');
 function add_link_atts($atts)
 {
-	$atts['class'] = 'nav-link ';
+	if (has_nav_menu('secondary-menu')){
+	$atts['class'] = 'nav-link account pe-5';
+	}else{
+		$atts['class'] = 'nav-link';
+	}
 	return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_link_atts');

@@ -18,12 +18,14 @@
         ?>
             <div class="carousel-item  <?php if ($i == 1) echo ' active'; ?>">
                 <?php the_post_thumbnail('full', array('class' => "d-none")); ?>
-                <div class="position-absolute top-0 h-100  img">
-                    <div class="front  ">
-                        <p class="front1"><span><?php the_title(); ?></span></p>
-                        <div class="front2  fadeOut"><?php the_excerpt(); ?></div>
+                <div class="front-x">
+                    <div class="front">
+                        <p class=" front1"><span><?php the_title(); ?></span></p>
+                        <div class="front2 fadeOut "><?php the_excerpt(); ?></div>
+
                         <a href="#secondpara" ><?php echo $started['scrolldown']; ?><span><i class="fa-solid fa-arrow-down-long scrollDown "></i></span></a>
                     </div>
+
                 </div>
             </div>
         <?php
@@ -64,7 +66,7 @@
             <div class="row">
                 <div class="col-6 col-md-6 col-sm-12 align-self-center" id="card-<?php the_ID(); ?>">
                     <!-- Card -->
-                    <div class="card shadow-0 second ps-xl-5 ps-lg-0 ">
+                    <div class="card shadow-0 second  ps-lg-0 ">
                         <!-- Card content -->
                         <div class="card-body secondtext ps-lg-3 ms-lg-0 ps-md-0 p-0">
                             <!--Subtitle  -->

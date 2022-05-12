@@ -7,17 +7,56 @@ body{
     // background-color: $BG !important;
     margin: 0;
     padding: 0;
+    // rfs: true;
+}
+
+
+.bglist{
+    background: $BG;
+}
+.front-x{
+    height: 60%;
+    // @media (max-width: 1440px) {
+    //     height: 50%;
+    //     width: 100%;
+       
+    // }
+    @media (max-width:425px) {
+        height: 50%;
+        width: 100%;
+    }
+    @media (max-width:768px) {
+        height: 45%;
+        width: 100%;
+    }
+    @media (max-width: 900px) {
+        height: 45%;
+        width: 100%;
+       
+    }
+    @media (max-width:400px) {
+        height: 50%;
+        width: 100%;
+    }
+    @media (max-width: 320px) {
+        height: 50%;
+        width: 100%;
+       
+    }
+    @media (max-width: 292px) {
+        height: 45%;
+        width: 100%;
+       
+    }
+    
 }
 .front{
-    margin: 19vw 22vw;
-    @media (max-width: 1024px) {
-        margin: 34vw 16vw;
-    } 
-    @media (max-width: 844px) {
-        margin: 41vw 19vw 0 8vw;
+    padding: 0 0% 0 10%;
+    @media (max-width:900px) {
+        padding: 0 15% 0 5%;
     }
-    @media (max-width: 768px) {
-        margin: 46vw 12vw;
+    @media (max-width:786px) {
+        padding: 0 20% 0 5%;
     }
     img{
         display: none;
@@ -32,31 +71,87 @@ body{
         }
         span {
             color: $BG;
-            @include Font-Adjustment('Overpass Mono', normal, 600, 1.50vw,0);
+            @include Font-Adjustment('Overpass Mono', normal, 700, 18px,22.79px);
             letter-spacing: 6px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: start;
+            
+            @media (max-width: 768px) {
+                @include Font-Adjustment('Overpass Mono', normal, 700,14px,0);
+            }
             @media (max-width: 425px) {
-                @include Font-Adjustment('Overpass Mono', normal, 600, 2.7vw,0);
+                @include Font-Adjustment('Overpass Mono', normal, 700,11px,0);
+            }
+            @media (max-width: 320px) {
+                @include Font-Adjustment('Overpass Mono', normal, 700,8px,0);
+            }
+            @media (max-width: 290px) {
+                @include Font-Adjustment('Overpass Mono', normal, 700,8px,0);
             }
         }
     }
     .front2{
+        padding: 0 0 8px 0;
         color: $WeiB;
-        @include Font-Adjustment('Chronicle', normal, 0, 5.111vw , 6.544vw);
+        @include Font-Adjustment('Chronicle', normal, 0,  76px ,83px);
         text-transform: capitalize;
-        @media (max-width: 425px) {
-            @include Font-Adjustment('Chronicle', normal, 0, 9.111vw , 11.944vw);
+        @media (max-width: 1400px) {
+            @include Font-Adjustment('Chronicle', normal, 0,70px ,80px);
+           
+        }
+        @media (max-width: 1300px) {
+            @include Font-Adjustment('Chronicle', normal, 0,60px ,60px);
+           
+        }
+        @media (max-width: 1000px) {
+            @include Font-Adjustment('Chronicle', normal, 0,54px ,72px);
+           
+        }
+        
+        @media (max-width: 900px) {
+            @include Font-Adjustment('Chronicle', normal, 0,54px ,72px);
+           
+        }
+        
+       
+        @media (max-width: 768px) {
+            @include Font-Adjustment('Chronicle', normal, 0,44px ,62px);
+           
+        }
+        @media (max-width: 620px) {
+            @include Font-Adjustment('Chronicle', normal, 0,34px ,42px);
+           
+        }
+        @media (max-width: 475px) {
+            @include Font-Adjustment('Chronicle', normal, 0,24px ,32px);
+            padding: 0;
+        }
+        @media (max-width: 320px) {
+            @include Font-Adjustment('Chronicle', normal, 0,20px ,22px);
+            padding:  0;
+        }
+        @media (max-width: 292px) {
+            @include Font-Adjustment('Chronicle', normal, 0,16px ,22px);
+            padding:  0;
         }
     }
     a {
+        
         text-decoration: none;
         color: $WeiB;
-        @include Font-Adjustment('Overpass Mono', normal, 600, 1.250vw,1vw);
+        @include Font-Adjustment('Overpass Mono', normal, 600,18px,22.79px);
+        @media (max-width: 768px) {
+            @include Font-Adjustment('Overpass Mono', normal, 600,14px,0);
+        }
         @media (max-width: 425px) {
-            @include Font-Adjustment('Overpass Mono', normal, 600, 3.0vw,0);
+            @include Font-Adjustment('Overpass Mono', normal, 600,11px,0);
+           
+        }
+        @media (max-width: 292px) {
+            @include Font-Adjustment('Overpass Mono', normal, 600,8px,0);
+           
         }
         .fa-solid {
             display: inline-block;
@@ -88,7 +183,12 @@ body{
     background-position: center center;
     background-size: cover;
     padding: 0 15%;
-   
+    @media (max-width:425px)  {
+        padding: 0 0;
+    }
+    @media (max-width:900px)  {
+        padding: 0 0;
+    }
   }
   
 .carousel-item.active,
@@ -100,42 +200,52 @@ align-items: center;
 }
 .carousel-control-next, .carousel-control-prev{
     opacity: 1 !important;
+    
 }
+
 .carousel-indicators{
     margin: 0 !important;
     display: flex;
     justify-content: start !important;
     flex-direction: column;
     align-items: end;
-    top: 28vw;
+    // top: 22vw;
     padding-right: 5vw !important;
-    height: auto;
+    height: 75%;
     @media (max-width:1024px) {
-        top: 40vw !important;
+        // top: 23vw !important;
     }
+    @media (max-width:425px) {
+        padding-right: 0vw !important;
+    }
+    
     & [data-slide-to] {
-        @include Font-Adjustment('Overpass Mono', normal, 600, 1.7vw, 1.5vw); 
+        @include Font-Adjustment('Overpass Mono', normal, 600,18px, 22.79px); 
         color: $WeiB;
         text-indent: -7vw !important;
         text-align: center;
-        height: 4.7vw !important;
+        height: 2.7vw !important;
         width: 0.3vw !important;
         background-clip: border-box !important;
         background-color: $WeiB !important;
-        // @media (max-width:844px) {
-        //     text-indent: -11vw !important;
-        // }
-        // @media (max-width: 768px) {
-        //     // @include Font-Adjustment('Overpass Mono', normal, 600, 10px, 22.79px);
-        //     text-indent: 1vw !important ;
-        //     height: 0.3vw  !important;
-        //     width: 8vw !important;
-        //     border: 0 !important;
-        //     margin: 0 !important;
-        // }
-        // @media (max-width:425px) {
-        //     width: 16vw !important;
-        // }
+        @media (max-width:844px) {
+            text-indent: -11vw !important;
+        }
+        @media (max-width: 768px) {
+            @include Font-Adjustment('Overpass Mono', normal, 600, 10px, 22.79px);
+            text-indent: -11vw !important ;
+            height: 2.3vw  !important;
+            width: 0.5vw !important;
+            // border: 0 !important;
+            // margin: 0 !important;
+        }
+        @media (max-width:425px) {
+            width: 1vw !important;
+        }
+        @media (max-width:292px) {
+            text-indent: -16vw !important;
+            width: 0.2vw;
+        }
     }
     &.active{
         opacity: 1 !important; 
@@ -153,18 +263,18 @@ align-items: center;
 
 .carousel-control-prev{
     opacity: 1;
-    @media screen and (min-width: 992px){
-    bottom: auto!important;
-    top: 67vh!important;
-}
+    @media screen and (min-width: 900px) {
+        bottom: auto!important;
+        top: 47vh!important;
+    }
     .follow{
         writing-mode: vertical-rl;
         color: $WeiB;
-        @include Font-Adjustment('Overpass Mono', normal, 600, 1.7vw, 1.5vw);
-        // @media (max-width:1024px) {
-        //     padding-top: 43vw;
-        // }
-        @media (max-width:844px) {
+        @include Font-Adjustment('Overpass Mono', normal, 600, 18px,22.79px);
+        @media (max-width:990px) {
+           
+        }
+        @media (max-width:900px) {
             display: none;
         }
         
@@ -186,7 +296,8 @@ header{
         .logo {
           padding: 0;
           color: $WeiB;
-          @include Font-Adjustment('Chronicle-thin', normal, 700, 2.222vw, 2.667vw);
+          @include Font-Adjustment('Chronicle-thin', normal, 700, 32px, 38.4px);
+          letter-spacing: 0.01em;
         }
         .navlist {
             ul {
@@ -194,21 +305,23 @@ header{
                     a {
                         padding-left: 3.5rem !important;
                         color: $WeiB;
-                        @include Font-Adjustment('Overpass Mono', normal, 600, 1.250vw, 1.597vw);
+                        @include Font-Adjustment('Overpass Mono', normal, 600, 18px, 22.79px);
                     }
                 }
             }
         }
 
         .account {
-            a {
                 color: $WeiB;
-                @include Font-Adjustment('Overpass Mono', normal, 600, 1.181vw, 1.528vw);
-            }
+                @include Font-Adjustment('Overpass Mono', normal, 600, 17px, 21.52px);
+                img{
+                   font-size: 1.181vw;
+                }
         }
     }
     .king {
-        padding-left: 4.5vw;
+        // padding-top: 4.5vw;
+        padding-left: 66px;
     }
     .animated-icon1{
         width: 30px;
@@ -294,7 +407,7 @@ header{
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 10.38%);
     position: absolute;  
     left: 0;
-    top: 83vw;
+    top: 67vw;
     transform: translate(0%, -2%);
     -webkit-transform: translate(0%,-2%);
     z-index: 2;
@@ -509,7 +622,7 @@ header{
     }
     
     @media only screen and (min-width: 1200px) and (max-width:1440px){
-        top: 80vw;
+        top: 103vw;
         transform: translate(0%, -2%);
         -webkit-transform: translate(0%,-2%);
     }
@@ -521,83 +634,88 @@ header{
     }
     @media only screen and (min-width: 845px) and (max-width:964px){
         background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 3.38%);
-        top: 60vw;
+        top: 182vw;
         transform: translate(0%, 10%);
         -webkit-transform: translate(0%,10%);
     }
     @media only screen and (min-width: 600px) and (max-width:845px){
         background: $BG;
-        top: 108vw;
+        top: 189vw;
         transform: translate(0%, -2%);
         -webkit-transform: translate(0%,-2%);
     }
     @media only screen and (min-width: 690px) and (max-width:770px){
         background: $BG;
-        top: 108vw;
+        top: 168vw;
         transform: translate(0%, 4%);
         -webkit-transform: translate(0%,4%);
     }
    @media (max-width: 690px){
     background: $BG;
-    top: 60vw;
+    top: 120vw;
         transform: translate(0%, 5%);
         -webkit-transform: translate(0%,5%);
    }
    @media (max-width: 625px){
-        top: 70vw;
+        top: 110vw;
         transform: translate(0%, 6%);
         -webkit-transform: translate(0%,6%);
    }
    @media (max-width: 600px){
-    top: 70vw;
+    top: 110vw;
     transform: translate(0%, 1%);
     -webkit-transform: translate(0%,1%);
     }
     @media (max-width: 550px){
         background: $BG;
-        top: 70vw;
+        top: 115vw;
         transform: translate(0%, 3%);
         -webkit-transform: translate(0%,3%);
     }
     @media (max-width: 510px){
         background: $BG;
-        top: 70vw;
+        top: 115vw;
         transform: translate(0%, 3%);
         -webkit-transform: translate(0%,3%);
     }
     @media (max-width: 490px){
         background: $BG;
-        top: 70vw;
+        top: 115vw;
         transform: translate(0%, 4%);
         -webkit-transform: translate(0%,4%);
     }
     @media (max-width: 425px){
-        top: 23vw;
+        top: 115vw;
         transform: translate(0%, 6%);
         -webkit-transform: translate(0%,6%);
     }
     @media (max-width: 390px){
-        top: 23vw;
+        top: 123vw;
         transform: translate(0%, 7%);
         -webkit-transform: translate(0%,7%);
     }
     @media (max-width: 380px){
-        top: 23vw;
+        top: 123vw;
         transform: translate(0%, 7%);
         -webkit-transform: translate(0%,7%);
     }
     @media (max-width: 360px){
-        top: 23vw;
+        top: 123vw;
         transform: translate(0%, 6%);
         -webkit-transform: translate(0%,6%);
     }
     @media (max-width: 345px){
-        top: 23vw;
+        top: 137vw;
         transform: translate(0%, 5%);
         -webkit-transform: translate(0%,5%);
     }
     @media (max-width: 320px){
-        top: -28vw;
+        top: 128vw;
+        transform: translate(0%, 7%);
+        -webkit-transform: translate(0%,7%);
+    }
+    @media (max-width: 290px){
+        top: 149vw;
         transform: translate(0%, 7%);
         -webkit-transform: translate(0%,7%);
     }
@@ -616,13 +734,13 @@ header{
     display: flex;
     justify-content: end !important;
     @media (max-width:1500px) {
-        padding: 0rem 6rem!important;
+        padding: 0rem 4rem!important;
     }
 }
 #post-58 , #post-62{
     padding-left:  7rem !important;
     @media (max-width:1500px) {
-     padding: 0rem 6rem!important;
+     padding: 0rem 4rem!important;
  }
  }
 #card-60{
