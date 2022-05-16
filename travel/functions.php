@@ -115,7 +115,6 @@ function my_widgets_init()
 }
 add_action('widgets_init', 'my_widgets_init');
 
-
 add_action('init', 'create_custom_post_type');
 function create_custom_post_type()
 {

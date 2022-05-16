@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php $started = get_field("started"); ?>
 <!-- Carousel wrapper -->
-<div id="demo" class="carousel slide " data-ride="carousel" data-inerval=4000>
+<div id="demo" class="carousel slide carousel-fade " data-ride="carousel" data-inerval=4000>
 
     <!-- Indicators -->
     <!-- <ul class="carousel-indicators-small">

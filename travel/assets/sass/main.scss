@@ -50,6 +50,7 @@ body{
     }
     
 }
+
 .front{
     padding: 0 0% 0 10%;
     @media (max-width:900px) {
@@ -622,7 +623,7 @@ header{
     }
     
     @media only screen and (min-width: 1200px) and (max-width:1440px){
-        top: 103vw;
+        top: 69vw;
         transform: translate(0%, -2%);
         -webkit-transform: translate(0%,-2%);
     }
@@ -634,19 +635,19 @@ header{
     }
     @media only screen and (min-width: 845px) and (max-width:964px){
         background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 3.38%);
-        top: 182vw;
+        top: 91vw;
         transform: translate(0%, 10%);
         -webkit-transform: translate(0%,10%);
     }
     @media only screen and (min-width: 600px) and (max-width:845px){
         background: $BG;
-        top: 189vw;
+        top: 153vw;
         transform: translate(0%, -2%);
         -webkit-transform: translate(0%,-2%);
     }
     @media only screen and (min-width: 690px) and (max-width:770px){
         background: $BG;
-        top: 168vw;
+        top: 127vw;
         transform: translate(0%, 4%);
         -webkit-transform: translate(0%,4%);
     }
